@@ -1,0 +1,52 @@
+
+
+
+.btn-success-red {
+  color: #fff;
+  background-color: #fa4542;
+  border-color: #fa4542;
+  box-shadow: 0 3px 0 0 #be0201;
+}
+.btn-success-red:hover,
+.btn-success-red:focus,
+.btn-success-red.focus,
+.btn-success-red:active,
+.btn-success-red.active,
+.open > .dropdown-toggle.btn-success-red {
+  color: #fff;
+  background-color: #be0201;
+  border-color: #be0201;
+  box-shadow: 0 3px 0 0 #be0201;
+}
+.btn-success-red:active,
+.btn-success-red.active,
+.open > .dropdown-toggle.btn-success-red {
+  background-image: none;
+}
+.btn-success-red.disabled,
+.btn-success-red[disabled],
+fieldset[disabled] .btn-success-red,
+.btn-success-red.disabled:hover,
+.btn-success-red[disabled]:hover,
+fieldset[disabled] .btn-success-red:hover,
+.btn-success-red.disabled:focus,
+.btn-success-red[disabled]:focus,
+fieldset[disabled] .btn-success-red:focus,
+.btn-success-red.disabled.focus,
+.btn-success-red[disabled].focus,
+fieldset[disabled] .btn-success-red.focus,
+.btn-success-red.disabled:active,
+.btn-success-red[disabled]:active,
+fieldset[disabled] .btn-success-red:active,
+.btn-success-red.disabled.active,
+.btn-success-red[disabled].active,
+fieldset[disabled] .btn-success-red.active {
+  background-color: #fa4542;
+  border-color: #fa4542;
+  box-shadow: 0 3px 0 0 #be0201;
+}
+.btn-success-red .badge {
+  color: #5cb85c;
+  background-color: #fff;
+  box-shadow: 0 3px 0 0 #be0201;
+}
