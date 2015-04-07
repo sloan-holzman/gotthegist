@@ -1,0 +1,177 @@
+.new_login{
+ display: inline-block;
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+ul.new_login li {
+  display: inline-block;
+}
+
+ul.new_login li a {
+  display: inline-block;
+  color: #fff;
+  background: #151515;
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+ul.new_login li a:hover {
+  background: #c52d2f;
+  color: #fff;
+}
+
+#main-slider .active .animation.animated-item-1-updated {
+  -webkit-animation: fadeInUp 300ms linear 300ms both;
+  -moz-animation: fadeInUp 300ms linear 300ms both;
+  -o-animation: fadeInUp 300ms linear 300ms both;
+  -ms-animation: fadeInUp 300ms linear 300ms both;
+  animation: fadeInUp 300ms linear 300ms both;
+  color: #c52d2f;
+  text-shadow: 2px 2px #151515;
+  font-size: 400%;
+
+}
+
+#main-slider .active .animation.animated-item-1-BIG {
+  -webkit-animation: fadeInUp 300ms linear 300ms both;
+  -moz-animation: fadeInUp 300ms linear 300ms both;
+  -o-animation: fadeInUp 300ms linear 300ms both;
+  -ms-animation: fadeInUp 300ms linear 300ms both;
+  animation: fadeInUp 300ms linear 300ms both;
+  color: #c52d2f;
+  text-shadow: 2px 2px #151515;
+  font-size: 700%;
+  font-family: 'DragonWick Bold';
+  font-style: italic;
+  text-align: center;
+
+}
+
+@font-face {
+  font-family: 'DragonWick Bold';
+  src: url('http://www.fontsaddict.com/fontface/dragonwick-bold.ttf');
+}
+
+#main-slider .active .animation.animated-item-2-updated {
+  -webkit-animation: fadeInUp 300ms linear 600ms both;
+  -moz-animation: fadeInUp 300ms linear 600ms both;
+  -o-animation: fadeInUp 300ms linear 600ms both;
+  -ms-animation: fadeInUp 300ms linear 600ms both;
+  animation: fadeInUp 300ms linear 600ms both;
+  color: #151515;
+  text-shadow: 2px 2px #fff;  
+    font-size: 400%;
+
+}
+
+#main-slider .active .animation.animated-item-1-white {
+  -webkit-animation: fadeInUp 300ms linear 300ms both;
+  -moz-animation: fadeInUp 300ms linear 300ms both;
+  -o-animation: fadeInUp 300ms linear 300ms both;
+  -ms-animation: fadeInUp 300ms linear 300ms both;
+  animation: fadeInUp 300ms linear 300ms both;
+  color: #fff;
+  text-shadow: 2px 2px #151515;
+
+}
+
+#main-slider .active .animation.animated-item-2-white {
+  -webkit-animation: fadeInUp 300ms linear 600ms both;
+  -moz-animation: fadeInUp 300ms linear 600ms both;
+  -o-animation: fadeInUp 300ms linear 600ms both;
+  -ms-animation: fadeInUp 300ms linear 600ms both;
+  animation: fadeInUp 300ms linear 600ms both;
+  color: #fff;
+  text-shadow: 2px 2px #151515;
+
+}
+
+.form-control:focus {
+  box-shadow:0 0 8px #64b1d8 !important;
+  outline: 0 none;
+  background-color: #ebebeb !important;
+}
+
+
+
+.nav-tabs>li{
+  margin-bottom: 0px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.nav-tabs{
+  border-bottom: transparent;
+  border-right: 1px solid #e6e6e6;
+}
+
+.nav-tabs>li>a {
+  background: #f5f5f5;
+  color: #666;
+  border-radius: 0;
+  border: 0 none;
+  line-height: 24px;
+  margin-right:0;
+  padding: 13px 15px;
+}
+
+.nav-tabs li:last-child{
+  border-bottom: 0 none;
+} 
+
+.nav-stacked>li+li{
+  margin-top: 0;
+}
+
+.nav-tabs>li>a:hover{
+  background: #c52d2f;
+  color:#fff;
+}
+
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:hover, 
+.nav-tabs>li.active>a:focus {
+  border: 0;
+  color:#fff;
+  background: #c52d2f;
+  position: relative;
+}
+
+.nav-tabs>li.active>a:after {
+  position: absolute;
+  content:  "";
+  width: auto;
+  height: auto;
+  border-style:solid;
+  border-color: transparent transparent transparent #c52d2f;
+  border-width: 25px 22px;
+  right: -44px;
+  top:0;
+}
+
+span.stars, span.stars span {
+    display: block;
+    background: url("../../templates/images/stars-2.png") 0 -32px repeat-x;
+    background-size: 32px 64px;
+    width: 160px;
+    height: 32px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
+
+span.stars_grey, span.stars_grey span {
+    display: block;
+    background: url("../../templates/images/stars-3.png") 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars_grey span {
+    background-position: 0 0;
+}

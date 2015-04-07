@@ -1,0 +1,63 @@
+{% extends 'ratings/base.html' %}
+{% load staticfiles %} 
+{% block content %}
+<title>Rate A Matatu</title>
+<section id="blog" class="container">
+    <div class="center">
+        <h2>Rate Your Matatu</h2>
+    </div>
+    <div id="contact-page clearfix">
+        <form action="{% url 'ratings:rate' %}" method="post" name="ratingsForm">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>License Plate Number: </label>
+                        <input type="text" class="form-control" required="required" placeholder="e.g. 5791CD" name="plate_number">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Route: </label>
+                        <br>
+                        <select class="selectpicker" name="route_shot_name" required="required">
+                            {% for routes in routes_list %}
+                                <option>{{ routes.route_shot_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Rating: </label>
+                        <br>
+                        <input id="input-21e" value="0" type="number" name="Rating" required="required" class="rating" min=0 max=5 step=0.5 data-size="xs" >
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">                        
+                    <div class="form-group">
+                        <label>Comment Headline: </label>
+                        <textarea name="comment_title" id="message" required="required" placeholder="e.g. Best Matatu Ride Ever!" class="form-control" rows="1"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">                        
+                    <div class="form-group">
+                        <label>Comments: </label>
+                        <textarea name="comments" id="message" required="required" placeholder="e.g. The driver was very courteous.  He obeyed all the rules of the road.  AND HE PLAYED GREAT MUSIC!" class="form-control" rows="8"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class "row">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg" required="required">Submit Review</button>
+                </div>
+            </div>
+        </form>
+    </div>   
+</section>
+
+{% endblock %}
