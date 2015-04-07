@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	{% load staticfiles %}
+
+	{% block stylesheets %}
+		<link href="{% static 'ratings/css/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="{% static 'ratings/css/bootstrap-select.min.css' %}" rel="stylesheet">
+		<link href="{% static 'ratings/css/bootstrap-select.css' %}' %}" rel="stylesheet">
+		<link href="{% static 'ratings/css/bootstrap-select.css.map' %}" rel="stylesheet">        
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link href="{% static 'ratings/css/animate.min.css' %}" rel="stylesheet">
+		<link href="{% static 'ratings/css/prettyPhoto.css' %}" rel="stylesheet">
+		<link href="{% static 'ratings/css/main.css' %}" rel="stylesheet">
+		<link href="{% static 'ratings/css/smart_matatus.css' %}" rel="stylesheet">    
+		<link href="{% static 'ratings/css/responsive.css' %}" rel="stylesheet">
+		<link href="{% static 'ratings/css/jquery.dataTables_themeroller.css' %}" rel="stylesheet">
+		<link href="{% static 'ratings/css/jquery.dataTables.css' %}" rel="stylesheet">
+		<link href="{% static 'ratings/css/jquery.dataTables.min.css' %}" rel="stylesheet">
+		<!--be careful...this stuff might screw up the styling-->
+		<link href="{% static 'ratings/css/example.minimal.css' %}" rel="stylesheet">
+		<link href="{% static 'ratings/css/example.wink.css' %}" rel="stylesheet">
+		<link href="{% static 'ratings/css/star-rating.min.css' %}" rel="stylesheet">
+	{% endblock %}
+	{% block javascript %}
+	    <script src="{% static 'ratings/js/jquery.js' %}"></script>
+	    <script src="{% static 'ratings/js/bootstrap.min.js' %}"></script>
+	    <script src="{% static 'ratings/js/jquery.prettyPhoto.js' %}"></script>
+	    <script src="{% static 'ratings/js/jquery.isotope.min.js' %}"></script>
+	    <script src="{% static 'ratings/js/main.js' %}"></script>
+	    <script src="{% static 'ratings/js/wow.min.js' %}"></script>
+	    <script src="{% static 'ratings/js/smart_matatus.js' %}"></script>
+	    <script src="{% static 'ratings/js/bootstrap-select.js' %}"></script>
+	    <script src="{% static 'ratings/js/bootstrap-select.min.js' %}"></script>
+	    <script src="{% static 'ratings/js/bootstrap-select.js.map"></script>
+	    <script src="{% static 'ratings/js/jquery.dataTables.js' %}"></script>
+	    <script src="{% static 'ratings/js/jquery.dataTables.min.js' %}"></script>
+	    <script src="{% static 'ratings/js/hideShowPassword.js' %}"></script>   
+	    <script src="{% static 'ratings/js/hideShowPassword.min.js' %}"></script>
+	    <script src="{% static 'ratings/js/star-rating.min.js' %}"></script>
+	{% endblock %}
+	</head>
+
+	<body>
+	    <header id="header">
+	        <div class="top-bar">
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-sm-6 col-xs-4">
+	                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +19178808790</p></div>
+	                    </div>
+	                    <div class="col-sm-6 col-xs-8">
+	                       <div class="social">
+	                            <ul class="new_login">
+	                                <li><a href="../public/logout.php">Logout</a></li>
+	                            </ul>
+	                            <ul class="social-share">
+	                                <li><a href="../public/construction.php"><i class="fa fa-facebook"></i></a></li>
+	                                <li><a href="../public/construction.php"><i class="fa fa-twitter"></i></a></li>
+	                            </ul>
+	                            <div class="search">
+	                                <form role="form">
+	                                    <input type="text" class="search-form" autocomplete="on" placeholder="Search">
+	                                    <i class="fa fa-search"></i>
+	                                </form>
+	                           </div>
+	                       </div>
+	                    </div>
+	                </div>
+	            </div><!--/.container-->
+	        </div><!--/.top-bar-->
+
+	        <nav class="navbar navbar-inverse" role="banner">
+	            <div class="container">
+	                <div class="navbar-header">
+	                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	                        <span class="sr-only">Toggle navigation</span>
+	                        <span class="icon-bar"></span>
+	                        <span class="icon-bar"></span>
+	                        <span class="icon-bar"></span>
+	                    </button>
+	                    <a class="navbar-brand" href="{% url 'ratings:index' %}"><img src="{% static 'ratings/images/SmartMatatusLogo.jpg' %}" alt="logo"></a>
+	                </div>
+					
+	                <div class="collapse navbar-collapse navbar-right">
+	                    <ul class="nav navbar-nav">
+	                        <li class="active"><a href="../index.php">Home</a></li>
+	                        <li><a href="{% url 'ratings:about_us' %}">About Us</a></li>
+	                        <li class="dropdown">
+	                            <a href="../public/rate_matatu.php" class="dropdown-toggle" data-toggle="dropdown">Matatu Rating<i class="fa fa-angle-down"></i></a>
+	                            <ul class="dropdown-menu">
+	                                <li><a href="../public/select_route.php">Search Ratings</a></li>
+	                                <li><a href="../public/rate_matatu.php">Rate a Matatu</a></li>
+	                            </ul>
+	                        </li>
+	                        <li class="dropdown">
+	                            <a href="../public/route_maps.php" class="dropdown-toggle" data-toggle="dropdown">Directions<i class="fa fa-angle-down"></i></a>
+	                            <ul class="dropdown-menu">
+	                                <li><a href="../public/route_maps.php">Maps</a></li>
+	                                <li><a href="../public/directions.php">Directions</a></li>
+	                                <li><a href="../public/routes.php">Routes</a></li>
+	                            </ul>
+	                        </li>
+	                        <li class="dropdown">
+	                            <a href="../public/construction.php" class="dropdown-toggle" data-toggle="dropdown">GPS Tracking<i class="fa fa-angle-down"></i></a>
+	                            <ul class="dropdown-menu">
+	                                <li><a href="../public/construction.php">Search</a></li>
+	                                <li><a href="../public/construction.php">Favorite Routes</a></li>
+	                            </ul>
+	                        </li>
+	                    </ul>
+	                </div>
+	            </div><!--/.container-->
+	        </nav><!--/nav-->
+			
+	    </header><!--/header-->
+	{% block content %}
+
+		<section id="blog" class="container">
+		    <div class="center">
+		        <h2>Sorry, No Ratings!</h2>
+		        <p>
+					{% if latest_reviews_list %}
+					    <ul>
+					    {% for reviews in latest_reviews_list %}
+					        <li>{{ reviews.plate_number }}</li>
+					    {% endfor %}
+					    </ul>
+					{% else %}
+					    <p>No reviews are available.</p>
+					{% endif %}
+		        </p>
+		        <a class="btn btn-primary" href="../public/welcome.php">GO BACK TO THE HOMEPAGE</a>
+		    </div>
+		</section>
+
+	{% endblock %}
+	    <section id="bottom">
+
+	    </section><!--/#bottom-->
+	    <footer id="footer" class="midnight-blue">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-6">
+	                    Sloan Holzman, Public Entrepreneurship.
+	                </div>
+	                <div class="col-sm-6">
+	                    <ul class="pull-right">
+	                        <li><a href="../public/welcome.php">Home</a></li>
+	                        <li><a href="../public/about-us.php">About Us</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </footer><!--/#footer-->
+	</body>
+</html>

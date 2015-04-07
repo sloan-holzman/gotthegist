@@ -1,0 +1,11 @@
+<h1>Plate Number: {{ reviews.plate_number }}</h1>
+<ul>
+{% for review in reviews %}
+    <li>{{ reviews.plate_number }}</li>
+    <li>{{ reviews.route_shot_name }}</li>
+    <li>{{ reviews.rating }}</li>
+    <li>{{ reviews.comment_title }}</li>
+    <li>{{ reviews.choice_text }}</li>
+    <li>{{ reviews.choice_text }}</li>
+{% endfor %}
+</ul>

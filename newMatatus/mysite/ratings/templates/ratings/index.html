@@ -1,0 +1,21 @@
+{% extends 'ratings/base.html' %}
+ 
+{% block content %}
+		<section id="blog" class="container">
+		    <div class="center">
+		        <h2>Sorry, No Ratings!</h2>
+		        <p>
+					{% if latest_reviews_list %}
+					    <ul>
+					    {% for reviews in latest_reviews_list %}
+					        <li>{{ reviews.plate_number }}</li>
+					    {% endfor %}
+					    </ul>
+					{% else %}
+					    <p>No reviews are available.</p>
+					{% endif %}
+		        </p>
+		        <a class="btn btn-primary" href="../public/welcome.php">GO BACK TO THE HOMEPAGE</a>
+		    </div>
+		</section>
+{% endblock %}
